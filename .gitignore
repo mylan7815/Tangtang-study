@@ -1,0 +1,69 @@
+# ---- Secrets & env ----
+.env
+.env.local
+.env.*.local
+*.key
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+.venv-*/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Node / Next.js ----
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Pipeline outputs ----
+# 只保留前端实际使用的 outlines/ 和 quizzes/
+# pdfs/ 有版权风险；markdown/ 和 knowledge/ 前端不读且体积大
+output/*/pdfs/
+output/*/markdown/
+output/*/knowledge/
+output/_quizzes_backup/
+*.log
+plan.md
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---- Claude / local agent state ----
+.claude/
+
+# ---- 生成物（体积大 / 机器产物 → Release 分发） ----
+apps/web/public/audio/
+apps/web/public/audio.mp3-backup/
+apps/web/public/data/
+apps/web/public/data.old-backup/
+apps/web/public/textbook-pages/
+apps/web/public/story-images/
+scripts/tts/logs/
+scripts/tts/manifest.json
+scripts/tts/ui_manifest.json
+data/passages/
+data/stories/
+release-assets/
+
+# generated content source (real dir in main tree, symlink in worktrees)
+/data
